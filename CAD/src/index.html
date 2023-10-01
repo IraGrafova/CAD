@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="CAD Exchanger" />
+    <meta name="keywords" content="html, css, javascript" />
+    <meta name="author" content="Irina Grafova" />
+    <title>CAD Exchanger</title>
+    <style>
+      canvas { width: 100%; height: 100% }
+      </style>
+    
+  </head>
+  <body class="page">
+    <header class="header">
+      
+    </header>
+    <main class="content">
+        <form class="form" name="form" id="form">
+            <h2 class="form__title">Введите данные</h2>
+            <input
+              class="form__input_height"
+              type="number"
+              name="height"
+              id="height"
+              placeholder="Высота конуса"
+              required
+              minlength="1"
+              maxlength="8"
+            />
+            
+            <input
+              class="form__input_radius"
+              type="number"
+              name="radius"
+              id="radius"
+              placeholder="Радиус конуса"
+              required
+              minlength="1"
+              maxlength="8"
+            />
+            <input
+              class="form__input_segments"
+              type="number"
+              name="segments"
+              id="segments"
+              placeholder="Количество сегментов на окружности"
+              required
+              minlength="1"
+              maxlength="8"
+            />
+            <button
+              class="form__submit form__submit_disabled"
+              type="submit"
+             
+            >
+            Отобразить 3D-изображение
+            </button>
+          </form>
+    </main>
+    
+    
+   
+    
+  </body>
+
+</html>
