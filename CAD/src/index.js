@@ -12,6 +12,10 @@ const inputSegments = document.querySelector('.form__input_segments');
 
 let data = {};
 
+
+ 
+
+
 function submitData(evt) {
     evt.preventDefault();
     
@@ -19,7 +23,22 @@ data.height = inputHeight.value;
 data.radius = inputRadius.value;
 data.segments = inputSegments.value;
     
-    doTriangulation(data)
+    doTriangulation(data).then((array) => {
+console.log(array)
+
+
+
+
+
+
+
+
+
+
+
+
+
+    })
 }
 
 form.addEventListener('submit', submitData)
@@ -51,8 +70,23 @@ document.body.appendChild( renderer.domElement );
 // controls.rotateSpeed = 0.5;
 // controls.update();
 
+
+
+
 //Для создания конуса сначала задаем геометрию:
-const geometry = new THREE.ConeGeometry( 5, 20, 10 );  //(радиус, высота,  число граней)
+// const geometry = new THREE.ConeGeometry( 5, 20, 10 );  //(радиус, высота,  число граней)
+
+
+
+const geometry = new THREE.BufferGeometry();
+const vertices = new Float32Array([
+	new THREE.Vector3(-10, 10, 0),
+	new THREE.Vector3(-10, -10, 0),
+	new THREE.Vector3(10, -10, 0)
+]);
+geometry.addAttribute('position', new THREE.BufferAttribute(vertices, 3));
+
+
 
 //Задаем матерал
 const material = new THREE.MeshBasicMaterial( { color: 0xA9A9A9, } ); //wireframe: true, emissive: 0x111111,
