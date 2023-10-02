@@ -13,7 +13,7 @@
   },
   "author": "Irina Grafova",
   "license": "ISC",
-  "description": "",
+  "description": "npm run dev",
   "devDependencies": {
     "@babel/core": "^7.23.0",
     "@babel/preset-env": "^7.22.20",
