@@ -1,6 +1,7 @@
 {
   "dependencies": {
     "core-js": "^3.32.2",
+    "decimal.js": "^10.4.3",
     "three": "^0.157.0",
     "three-orbit-controls": "^82.1.0"
   },
