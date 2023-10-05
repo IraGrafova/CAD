@@ -16,17 +16,10 @@ app.use(bodyParser.json()); // для собирания JSON-формата
 app.use(bodyParser.urlencoded({ extended: true })); // для приёма веб-страниц внутри POST-запроса
 
 const doTriangulation = (req, res) => {
-  console.log(req.body);
-
-  //     X, Y, Z coordinates of a node:
-  // A: {0, 0, H}, where H is a cone height
-  // Pi : {R * cos (2π * i / N), R * sin (2π * i / N), 0} , i=0,N-1 – see fig.2
 
   const H = Number(req.body.height);
   const R = req.body.radius;
   const N = req.body.segments;
-
-  console.log(Number(H));
 
   const array = [0, 0, H];
   for (let i = 0; i < N; i++) {
@@ -55,6 +48,6 @@ app.use(
   })
 );
 
-app.use(router.post("/", doTriangulation)); //post
+app.use(router.post("/", doTriangulation));
 
 app.listen(3000);

@@ -9,61 +9,64 @@
     <meta name="author" content="Irina Grafova" />
     <title>CAD Exchanger</title>
     <style>
-      canvas { width: 100%; height: 100% }
-      </style>
-    
+      canvas {
+        width: 100%;
+        height: 100%;
+      }
+    </style>
   </head>
   <body class="page">
-    <header class="header">
-      
-    </header>
+    <header class="header"></header>
     <main class="content">
-        <form class="form" name="form" id="form">
-            <h2 class="form__title">Введите данные</h2>
+      <form class="form" name="form" id="form">
+        <h2 class="form__title">Введите данные</h2>
+        <ul class="form__input-list">
+          <li>
             <input
-              class="form__input_height"
+              class="form__input form__input_height"
               type="number"
               name="height"
               id="height"
               placeholder="Высота конуса"
               required
               minlength="1"
-              maxlength="8"
+              maxlength="2"
             />
-            
+          </li>
+          <li>
             <input
-              class="form__input_radius"
+              class="form__input form__input_radius"
               type="number"
               name="radius"
               id="radius"
               placeholder="Радиус конуса"
               required
               minlength="1"
-              maxlength="8"
+              maxlength="2"
             />
+          </li>
+          <li>
             <input
-              class="form__input_segments"
+              class="form__input form__input_segments"
               type="number"
               name="segments"
               id="segments"
-              placeholder="Количество сегментов на окружности"
+              placeholder="Количество сегментов"
               required
               minlength="1"
-              maxlength="8"
+              maxlength="2"
             />
-            <button
-              class="form__submit form__submit_disabled"
-              type="submit"
-             
-            >
-            Отобразить 3D-изображение
-            </button>
-          </form>
+          </li>
+        </ul>
+        <button class="form__submit" type="submit">
+          Отобразить 3D-изображение
+        </button>
+      </form>
+      <ul class="params">
+        <li class="params__height"></li>
+        <li class="params__radius"></li>
+        <li class="params__segments"></li>
+      </ul>
     </main>
-    
-    
-   
-    
   </body>
-
 </html>
