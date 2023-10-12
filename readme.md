@@ -21,3 +21,6 @@
 *npm install* \
 *npm run start* \
 Порт для запуска фронтенд-части проекта - 3001.
+
+### Node.js, three.js, JavaScript
+
